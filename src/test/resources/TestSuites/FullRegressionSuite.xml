@@ -1,0 +1,22 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Regression Test Suite For All Tests" verbose="1">
+    <test name="Regression Tests">
+        <parameter name="browser" value="chrome"/>
+
+        <classes>
+            <class name="TestCases.AccountTests.AddressOrderTests.AddressOrder"/>
+            <class name="TestCases.AccountTests.EditEmailOfAccountTests.EditEmailOfAccountTest"/>
+            <class name="TestCases.AccountTests.EditPasswordOfAccountTests.EditPasswordOfAccountTest"/>
+            <class name="TestCases.AccountTests.SignInTests.TestSignIn"/>
+            <class name="TestCases.CustomerInterest.ReviewTests.ReviewsTests"/>
+            <class name="TestCases.CustomerInterest.SaleTests.SalesTest"/>
+            <class name="TestCases.ItemsTests.CartTests.CartTest"/>
+            <class name="TestCases.ItemsTests.ItemsFilterTests.ItemsFilterationTests"/>
+            <class name="TestCases.ItemsTests.ItemTests.ItemTest"/>
+            <class name="TestCases.TestScenario.E2E_Scenario"/>
+        </classes>
+
+
+    </test>
+</suite>
