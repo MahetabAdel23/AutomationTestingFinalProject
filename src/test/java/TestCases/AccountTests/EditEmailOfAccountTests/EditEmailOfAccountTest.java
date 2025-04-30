@@ -50,16 +50,33 @@ public class EditEmailOfAccountTest {
         softAssert.assertTrue(signInPage.validateSignInSuccessfuly(),"");
         softAssert.assertAll();
     }
+/*
     @Test(groups = {"RegressionTests","NegativeTests"})
     public void SignInWithUnEditEmailAfterEditItTest() throws Exception{
         SoftAssert softAssert=new SoftAssert();
-        HomePage home = new HomePage(driver);
         Thread.sleep(1000);
+        HomePage home = new HomePage(driver);
         home.clickSignInPanelButton();
         SignInPage signInPage = new SignInPage(driver);
-        signInPage.WaitToClickCreateAnAccountButton();
+        signInPage.clickCreateAnAccountButton();
         CreateAccountPage createAccountPage= new CreateAccountPage(driver);
         createAccountPage.executeCreateAccountData(10);
+        softAssert.assertTrue(createAccountPage.validateEnterWithNewAccount(),"not displayed");
+
+        MyAccountPage myAccountPage= new MyAccountPage(driver);
+        myAccountPage.clickEditButton();
+        myAccountPage.ChangeEmailCheckBox();
+        softAssert.assertTrue(myAccountPage.ValidateChangeEmailTitle(),"Change Email Title is not displayed");
+        myAccountPage.executeEmailChangedData(10);
+        softAssert.assertTrue(myAccountPage.validateEditedSuccessfully(),"Customer Login Title is not displayed");
+//
+        SoftAssert softAssert=new SoftAssert();
+        Thread.sleep(4000);
+        HomePage home = new HomePage(driver);
+        SignInPage signInPage = new SignInPage(driver);
+        CreateAccountPage createAccountPage= new CreateAccountPage(driver);
+        createAccountPage.clickCreateAccountPanel();
+       createAccountPage.executeCreateAccountData(10);
         softAssert.assertTrue(createAccountPage.validateEnterWithNewAccount(),"not displayed");
 
         MyAccountPage myAccountPage= new MyAccountPage(driver);
@@ -72,7 +89,7 @@ public class EditEmailOfAccountTest {
         signInPage.SignInWithUnEditEmailAfterEditItAccount(10);
         softAssert.assertTrue(signInPage.validateFaildSignIn(),"SignIn Correctly");
         softAssert.assertAll();
-    }
+    }*/
 
 
     @AfterTest

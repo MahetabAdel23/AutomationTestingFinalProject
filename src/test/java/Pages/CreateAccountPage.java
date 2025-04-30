@@ -21,6 +21,8 @@ public class CreateAccountPage {
     By ExistAccountConfirmMessageLocator = By.xpath("//div[contains(text(),'There is already an account with this email address')] ");
     By ButtonToSignOut = By.xpath("//div[@class='panel header']//button[@data-action='customer-menu-toggle']");
     // By SignOutButtonLocator = By.xpath("//a[@class='action sign-out']//span[text()='Sign Out']");
+   By CreateAccountPanelLocator = By.xpath("//div[@class='panel wrapper']//a[@href='https://magento.softwaretestingboard.com/customer/account/create/']");
+
     WebDriver driver;
     Logger logger;
     public CreateAccountPage(WebDriver driver) {
@@ -98,5 +100,9 @@ public class CreateAccountPage {
     public boolean validateEnterWithNewAccount ()
     {
         return BasePage.waitForIsDisplayed(driver,NewAccountTitleCreationLocator);
+    }
+    public void clickCreateAccountPanel()
+    {
+        driver.findElement(CreateAccountPanelLocator).click();
     }
 }

@@ -64,6 +64,7 @@ public class AddressPage {
     public void clickShippingEditButton()throws Exception
     {
         Thread.sleep(1500);
+        BasePage.waitElement(driver,ShippingEditButtonLocator);
         driver.findElement(ShippingEditButtonLocator).click();
     }
     public void clickChangeBillingAddressButton()

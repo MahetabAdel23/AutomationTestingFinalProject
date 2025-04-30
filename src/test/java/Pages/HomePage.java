@@ -66,7 +66,7 @@ public class HomePage {
     }
 
     public void NavigateWomenCategoryOptions() throws Exception{
-        Thread.sleep(1000);
+        Thread.sleep(2000);
         hoverOverWomenCategory();
         hoverOverTopWomenCategory();
         hoverOverJacketsWomenCategory();

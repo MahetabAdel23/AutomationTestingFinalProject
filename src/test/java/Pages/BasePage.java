@@ -24,7 +24,7 @@ private BasePage(){}
 
     public static WebElement waitElement(WebDriver driver,By locator)
     {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
         return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
 

@@ -161,6 +161,7 @@ public class CartTest {
         AddressPage addressPage=new AddressPage(driver);
         softAssert.assertTrue(addressPage.WaitEmailFieldDisplayed());
         addressPage.clickShippingMethodsTableRateRadio();
+        Thread.sleep(2000);
         addressPage.executShippingDataWithoutSignIn(2);
         softAssert.assertTrue(shoppingCartPage.ShippingAddressTitleDisplayed(),"not in the Shipping page");
 

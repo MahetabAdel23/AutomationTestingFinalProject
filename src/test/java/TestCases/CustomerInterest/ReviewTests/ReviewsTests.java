@@ -33,11 +33,12 @@ public class ReviewsTests {
     }
     //no1
     @Test(groups = {"RegressionTests","SmokeTests"})
-    public void ReviewsTests_NavigateCustomerReviewsTest() {//some time this testcase work and some time not
+    public void ReviewsTests_NavigateCustomerReviewsTest() throws Exception{//some time this testcase work and some time not
         SoftAssert softAssert=new SoftAssert();
         BackpackPage backpackPage=new BackpackPage(driver);
         backpackPage.clickBackPackItem();
         backpackPage.clickToDisplayReview();//load 20sec
+        Thread.sleep(2000);
         softAssert.assertTrue(backpackPage.isCustomerReviewsDisplayed(),"CustomerReviews not opened");
         softAssert.assertAll();
     }
