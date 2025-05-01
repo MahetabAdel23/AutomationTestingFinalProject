@@ -24,7 +24,7 @@ public class InvalidPasswordSignIn {
 
     //this testcase need new account to be passed
     @Test(groups = {"RegressionTests","SmokeTests"})
-    public void  SignInWithEditPasswordTest() throws Exception {
+    public void  SignInWithUnEditPasswordTest() throws Exception {
 
         SoftAssert softAssert = new SoftAssert();
         Thread.sleep(1000);
