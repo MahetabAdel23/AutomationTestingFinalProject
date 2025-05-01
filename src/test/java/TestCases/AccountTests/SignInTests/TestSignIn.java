@@ -54,7 +54,7 @@ public class TestSignIn {
         softAssert.assertTrue(signInPage.ValidateForgetPaswordMessage(),"there is no account message not displayed");
         softAssert.assertAll();
      }
-//no3
+//no3//data6
     //this testcase need new account to be passed
     @Test(groups = {"RegressionTests","SmokeTests"})
     public void TestSignIn_CreateNewAccountData() {
@@ -68,7 +68,7 @@ public class TestSignIn {
         softAssert.assertTrue(createAccountPage.validateEnterWithNewAccount(),"not displayed");
         softAssert.assertAll();
     }
-//no4
+//no4//data7
     @Test(groups = {"RegressionTests","NegativeTests"})
     public void TestSignIn_CreateAccountExistBeforeTest() {
         SoftAssert softAssert=new SoftAssert();
